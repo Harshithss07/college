@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for futuristic effects */
+:root {
+  --electric-blue: #00D4FF;
+  --neon-purple: #8B5CF6;
+  --cyber-green: #00FF88;
+  --space-black: #0A0A0F;
+  --dark-surface: #1A1A2E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--space-black) 0%, var(--dark-surface) 100%);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Professional solid backgrounds */
+.glass {
+  background: rgba(26, 26, 46, 0.95);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Neon glow effects */
+.neon-glow-blue {
+  box-shadow: 0 0 20px var(--electric-blue), 0 0 40px var(--electric-blue), 0 0 80px var(--electric-blue);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 20px var(--neon-purple), 0 0 40px var(--neon-purple), 0 0 80px var(--neon-purple);
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 20px var(--cyber-green), 0 0 40px var(--cyber-green), 0 0 80px var(--cyber-green);
+}
+
+/* Professional button */
+.cyber-button {
+  position: relative;
+  background: linear-gradient(135deg, var(--electric-blue), var(--neon-purple));
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cyber-button:hover {
+  background: linear-gradient(135deg, #00B8E6, #7C3AED);
+  box-shadow: 0 6px 12px rgba(0, 212, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--space-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--electric-blue), var(--neon-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--neon-purple), var(--cyber-green));
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .glass {
+    background: rgba(26, 26, 46, 0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .neon-glow-blue,
+  .neon-glow-purple,
+  .neon-glow-green {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: scale(1.02);
+  }
+  
+  .group:hover .group-hover\:text-electric-blue {
+    color: var(--electric-blue);
+  }
+}
+
+/* Prevent zoom on input focus in iOS */
+@supports (-webkit-touch-callout: none) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+  
+}
