@@ -4,7 +4,7 @@ A modern, animated hackathon website built with **MERN stack** (MongoDB, Express
 
 ![CyberCode Logo](https://via.placeholder.com/150x50/00D4FF/000000?text=CYBERCODE)
 
-## ✨ Features
+### ✨ Features
 
 ### 🎨 **Futuristic Design**
 - **Color Scheme**: Electric Blue (#00D4FF), Neon Purple (#8B5CF6), Cyber Green (#00FF88)
